@@ -311,14 +311,27 @@ li {
 }
 
 .mobile-btns {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 3;
+  position: fixed;
+  right: 20px;
+  top: 40px;
+  z-index: 4;
+  display: none;
 }
 .mobile-btns button {
   background: transparent;
   border: none;
+}
+.mobile-btns .off {
+  display: block;
+}
+.mobile-btns .on {
+  display: none;
+}
+.mobile-btns.small .off {
+  display: none;
+}
+.mobile-btns.small .on {
+  display: block;
 }
 .mobile-btns .close-btn {
   display: none;
@@ -328,7 +341,7 @@ li {
   display: none;
 }
 .mobile-nav {
-  /* display: none; */
+  display: none;
   position: relative;
   width: 100%;
   height: 100%;
@@ -352,7 +365,7 @@ li {
   color: #000;
 }
 .mobile-nav .select-menu {
-  width: 100%;
+  width: 90%;
   height: 46px;
   border-radius: 30px;
   box-sizing: border-box;
@@ -361,9 +374,13 @@ li {
   color: #b5b5b5;
   font-size: 16px;
   background: url(../img/down-gray.png) no-repeat;
-  background-position: 93% 50%;
+  background-position: 97% 50%;
   background-color: transparent;
   background-size: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
 }
 
 /* End Header */
@@ -399,10 +416,10 @@ li {
   #header .container .nav-menu {
     display: none;
   }
-  #header.small .container .select-menu {
+  #header .container .select-menu {
     display: none;
   }
-  .mobile-nav {
+  .mobile-btns {
     display: block;
   }
 }

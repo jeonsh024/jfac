@@ -43,7 +43,7 @@
   });
 
   var nav_sections = $("section");
-  var main_nav = $(".nav-menu");
+  var main_nav = $(".nav-menu, .nav-menu");
 
   $(window).on("scroll", function () {
     var cur_pos = $(this).scrollTop() + 80;
@@ -68,17 +68,22 @@
     });
   });
 
-  // Toggle .small class to #header when page is scrolled
+  $(".nav-menu a").on("click", function () {
+    $(".mobile-nav").fadeOut();
+    $(".menu-btn").show();
+    $(".close-btn").hide();
+  });
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
-      $("#header, .mobile-nav").addClass("small");
+      $("#header, .mobile-btns").addClass("small");
     } else {
-      $("#heade, .mobile-nav").removeClass("small");
+      $("#heade, .small, .mobile-btns").removeClass("small");
     }
   });
 
   if ($(window).scrollTop() > 100) {
-    $("#header, .mobile-nav").addClass("small");
+    $("#header, .mobile-btns").addClass("small");
   }
 
   // Back to top button
@@ -101,53 +106,16 @@
     return false;
   });
 
-  var isplay = true;
-
-  $(".menu-up").hide();
-  $(".m-nav-menu .cs-menu a").click(function () {
-    // $(this).next(".list-wrap").slideToggle(500);
-    // $(this).find(".menu-up, .menu-down").toggle();
-
-    if (isplay) {
-      $(this).next(".list-wrap").slideDown();
-      $(".menu-up").show();
-      $(".menu-down").hide();
-      $(".m-nav-menu .cs-menu > a").css({
-        background: "#1f5daa",
-        color: "#fff",
-      });
-    } else {
-      $(this).next(".list-wrap").slideUp();
-      $(".menu-down").show();
-      $(".menu-up").hide();
-      $(".m-nav-menu .cs-menu > a").css({
-        background: "#fff",
-        color: "#191919",
-      });
-    }
-    isplay = !isplay;
+  $(".menu-btn").on("click", function () {
+    $(".mobile-nav").fadeIn();
+    $(".close-btn").show();
+    $(this).hide();
   });
 
-  // $(".mobile-nav").css("width", "0");
-
-  // $(".menu-btn").on("click", function () {
-  //   $(".mobile-nav").show().animate({ width: "85%" });
-  //   $(".close-btn").show();
-  //   $(this).hide();
-  //   $("#bg").fadeIn();
-  // });
-
-  // $(".close-btn").on("click", function () {
-  //   $(".mobile-nav").show().animate({ width: "0" });
-  //   $(".menu-btn").show();
-  //   $(this).hide();
-  //   $("#bg").fadeOut();
-  // });
-
-  // $("#bg").on("click", function () {
-  //   $(".mobile-nav").show().animate({ width: "0" });
-  //   $(".menu-btn").show();
-  //   $(".close-btn").hide();
-  //   $(this).fadeOut();
-  // }); // mobile menu END
+  $(".close-btn").on("click", function () {
+    $(".mobile-nav").fadeOut();
+    $(".menu-btn").show();
+    $(this).hide();
+  });
+  // mobile menu END
 })(jQuery);
