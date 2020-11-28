@@ -41,9 +41,9 @@
         </div>
         <nav class="nav-menu">
           <ul>
-            <li><a href="#section01">회사소개</a></li>
-            <li><a href="#section02">지사문의</a></li>
-            <li><a href="#section03">서비스</a></li>
+            <li><a href="#section01">사업소개</a></li>
+            <li><a href="#section02">사업결과물</a></li>
+            <li><a href="#section03">트멍소개</a></li>
           </ul>
         </nav>
         <form action="">
@@ -70,9 +70,9 @@
     <div class="mobile-nav">
       <nav class="nav-menu">
         <ul>
-          <li class="menu-list"><a href="index.html#section01">회사소개</a></li>
-          <li class="menu-list"><a href="#section02">지사문의</a></li>
-          <li class="menu-list"><a href="#section03">서비스</a></li>
+          <li class="menu-list"><a href="index.html#section01">사업소개</a></li>
+          <li class="menu-list"><a href="#section02">사업결과물</a></li>
+          <li class="menu-list"><a href="#section03">트멍소개</a></li>
         </ul>
       </nav>
 
@@ -114,16 +114,16 @@
           <div class="item" onclick="changeIframeUrl('https://www.youtube.com/embed/BmG2Usly8fY')">
             <div class="img"><img src="assets/img/img2.png" alt="img2" /></div>
             <div class="info">
-              박아현
-              <p>(제주문화예술재단 미리문화팀)</p>
+              송재민
+              <p>(퍼실리테이터)</p>
             </div>
           </div>
 
           <div class="item" onclick="changeIframeUrl('https://www.youtube.com/embed/-2GBSu_0b50')">
             <div class="img"><img src="assets/img/img3.png" alt="img3" /></div>
             <div class="info">
-              박아현
-              <p>(제주문화예술재단 미리문화팀)</p>
+              이지수
+              <p>(퍼실리테이터)</p>
             </div>
           </div>
 
@@ -315,7 +315,16 @@
       slidesToShow: 3,
       slidesToScroll: 3,
       dots: true,
-      arrows: false
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     })
 
 

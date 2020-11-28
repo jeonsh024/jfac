@@ -423,3 +423,24 @@ li {
     display: block;
   }
 }
+@media (max-width: 480px) {
+  #header {
+    height: 68px;
+  }
+  #header .container .logo {
+    width: 83px;
+  }
+  #header .container .logo a img {
+    width: 100%;
+  }
+  .mobile-btns {
+    top: 25px;
+    right: 15px;
+  }
+
+  #footer .container .foot-info {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 16px;
+  }
+}
