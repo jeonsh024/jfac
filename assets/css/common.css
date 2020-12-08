@@ -216,6 +216,11 @@ li {
   background: #006dbb;
   color: #fff;
 }
+
+button:focus {
+  outline: none;
+}
+
 /* Header */
 #header {
   width: 100%;
