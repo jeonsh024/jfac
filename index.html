@@ -43,13 +43,20 @@
           <ul>
             <li><a href="#section01">사업소개</a></li>
             <li><a href="#section02">우리가 함께 만든 자료</a></li>
-            <li><a href="#section03">프로그램 아카이밍</a></li>
+            <li><a href="#section03">프로그램 아카이빙</a></li>
           </ul>
         </nav>
         <form action="">
           <select class="select-menu" onchange="if(this.value) location.href=(this.value);">
-            <option value="http://artreach.or.kr">제주문화예술교육지원센터</option>
-            <option value="http://artreach.or.kr">제주문화예술교육지원센터</option>
+            <option value="https://www.jfac.kr:453/">제주문화예술재단</option>
+            <option value="http://artreach.or.kr/">제주문화예술교육지원센터</option>
+            <option value="http://artspaceiaa.kr/">예술공간 이아</option>
+            <option value="http://www.sjcgallery.kr/">산지천갤러리</option>
+            <option value="http://sanyang.or.kr/">예술곶 산양</option>
+            <option value="http://jejunolda.com/">제주인놀다</option>
+            <option value="https://www.youtube.com/channel/UC8DGYC1bpZOMkZ_FN440IVw">제주문화예술재단 아트노크 유튜브</option>
+            <option value="https://artknock.net/default/">제주문화예술재단 아트노크 홈페이지</option>
+            <option value="https://www.instagram.com/artknock/">제주문화예술재단 아트노크 인스타그램</option>
           </select>
         </form>
       </div>
@@ -72,14 +79,21 @@
         <ul>
           <li class="menu-list"><a href="index.html#section01">사업소개</a></li>
           <li class="menu-list"><a href="#section02">우리가 함께 만든 자료</a></li>
-          <li class="menu-list"><a href="#section03">프로그램 아카이밍</a></li>
+          <li class="menu-list"><a href="#section03">프로그램 아카이빙</a></li>
         </ul>
       </nav>
 
       <form action="">
         <select class="select-menu" onchange="if(this.value) location.href=(this.value);">
-          <option value="http://artreach.or.kr">제주문화예술교육지원센터</option>
-          <option value="http://artreach.or.kr">제주문화예술교육지원센터</option>
+          <option value="https://www.jfac.kr:453/">제주문화예술재단</option>
+          <option value="http://artreach.or.kr/">제주문화예술교육지원센터</option>
+          <option value="http://artspaceiaa.kr/">예술공간 이아</option>
+          <option value="http://www.sjcgallery.kr/">산지천갤러리</option>
+          <option value="http://sanyang.or.kr/">예술곶 산양</option>
+          <option value="http://jejunolda.com/">제주인놀다</option>
+          <option value="https://www.youtube.com/channel/UC8DGYC1bpZOMkZ_FN440IVw">제주문화예술재단 아트노크 유튜브</option>
+          <option value="https://artknock.net/default/">제주문화예술재단 아트노크 홈페이지</option>
+          <option value="https://www.instagram.com/artknock/">제주문화예술재단 아트노크 인스타그램</option>
         </select>
       </form>
     </div>
@@ -183,52 +197,11 @@
               <p class="title">매거진(일본어)</p>
             </div>
           </div>
-
-          <div class="list">
-            <div class="img">
-              <img src="assets/img/magazine01.png" alt="magazine01" />
-              <p class="title">매거진(한국어)</p>
-            </div>
-          </div>
-          <div class="list">
-            <div class="img">
-              <img src="assets/img/magazine02.png" alt="magazine02" />
-              <p class="title">매거진(중국어)</p>
-            </div>
-          </div>
-
-          <div class="list">
-            <div class="img">
-              <img src="assets/img/magazine03.png" alt="magazine03" />
-              <p class="title">매거진(일본어)</p>
-            </div>
-          </div>
-
-          <div class="list">
-            <div class="img">
-              <img src="assets/img/magazine01.png" alt="magazine01" />
-              <p class="title">매거진(한국어)</p>
-            </div>
-          </div>
-          <div class="list">
-            <div class="img">
-              <img src="assets/img/magazine02.png" alt="magazine02" />
-              <p class="title">매거진(중국어)</p>
-            </div>
-          </div>
-
-          <div class="list">
-            <div class="img">
-              <img src="assets/img/magazine03.png" alt="magazine03" />
-              <p class="title">매거진(일본어)</p>
-            </div>
-          </div>
-
         </div>
         <!-- End item-list -->
 
         <div class="sub-title">그룹별 워크샵 과제 결과물</div>
-        <div class="item-list result-wrap">
+        <div class="result-wrap">
           <div class="list">
             <div class="img">
               <img src="assets/img/img4.png" alt="img4" />
@@ -406,10 +379,10 @@
         COPYRIGHT 2020 제주문화예술재단 트멍. ALL RIGHTS RESERVED.
       </div>
 
-      <div class="sns-wrap">
+      <!-- <div class="sns-wrap">
         <a href="#" target="_blank"><img src="assets/img/facebook.png" alt="facebook" /></a>
         <a href="#" target="_blank"><img src="assets/img/blog.png" alt="blog" /></a>
-      </div>
+      </div> -->
     </div>
   </footer>
   <!-- End Footer -->
@@ -423,11 +396,11 @@
 
   <script>
     $('.popup').click(function () {
-      $('.popup').hide();
+      $('.popup').css('display', 'none');
     });
 
     $('.item .img').click(function () {
-      $('.popup').show();
+      $('.popup').css('display', 'block');
     });
 
     function changeIframeUrl(url) {
@@ -435,6 +408,23 @@
     }
 
     $('.item-list').slick({
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      dots: false,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+          }
+        }
+      ]
+    });
+
+    $('.result-wrap').slick({
       slidesToShow: 3,
       slidesToScroll: 3,
       dots: true,
