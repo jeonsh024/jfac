@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>JFAC</title>
+    <meta name="title" content="JFAC" />
+    <meta name="description" content="제주 청소년 문화예술캠프" />
+    <meta name="keyword" content="" />
+    <meta name="author" content="" />
+    <meta name="og:title" content="JFAC" />
+    <meta name="og:description" content="제주 청소년 문화예술캠프" />
+    <meta name="og:image" content="assets/" />
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.ico" rel="icon" />
+    <link href="assets/img/favicon.ico" rel="apple-touch-icon" />
+
+    <!-- font icon -->
+    <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+    <!-- CSS File -->
+    <link href="../assets/css/common.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/slick/slick.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="modal modal1">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="tlt">한중일 오리엔테이션</p>
+                <button type="button" class="close"></button>
+            </div>
+            <!-- End modal-header -->
+            <div class="modal-body">
+                <div class="photo-wrap">
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_1.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_2.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_3.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_4.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_5.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_6.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_7.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_8.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_9.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_10.jpg" />
+                    </div>
+
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_11.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_12.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_13.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_14.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_15.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_16.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_17.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_18.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_19.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_20.jpg" />
+                    </div>
+
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_21.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_22.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_23.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_24.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_25.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_26.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_27.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_28.jpg" />
+                    </div>
+                    <div class="photo">
+                        <img src="../assets/img/program2/program2_29.jpg" />
+                    </div>
+
+                </div>
+                <div class="page-wrap">
+                    <div class="page-num"></div>
+                </div>
+            </div>
+            <!-- End modal-body -->
+        </div>
+    </div>
+    <!-- End modal -->
+
+
+    <!-- JS File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/slick/slick.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+
+    <script>
+        $('.modal .close').click(function () {
+            $('.modal').hide();
+        });
+
+        $('.photo-wrap').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+
+        var $status = $('.page-num');
+        var $slickElement = $('.photo-wrap');
+
+        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+            //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $status.text(i + ' / ' + slick.slideCount);
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

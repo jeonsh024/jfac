@@ -417,6 +417,16 @@ button:focus {
 }
 /* End Footer */
 
+@media (max-width: 1024px) {
+  #header .container .nav-menu a {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  #header .container .select-menu {
+    width: 180px;
+  }
+}
+
 @media (max-width: 1000px) {
   #header .container .nav-menu {
     display: none;
@@ -442,9 +452,12 @@ button:focus {
     top: 25px;
     right: 15px;
   }
+  #footer .container {
+    width: 96%;
+  }
 
   #footer .container .foot-info {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 18px;
     /* margin-bottom: 16px; */
   }
