@@ -326,16 +326,16 @@
           </div>
 
           <div class="list-wrap">
-            <div class="list" onclick=modal1();>
+            <div class="list" onclick="modal1('제주문화외교관 오리엔테이션')" ;>
               <div class="img"><img src="assets/img/thumb01.png" alt="thumb01" /></div>
             </div>
-            <div class="list" onclick=modal2()>
+            <div class="list" onclick="modal2('한중일 오리엔테이션')">
               <div class="img"><img src="assets/img/thumb02.png" alt="thumb02" /></div>
             </div>
-            <div class="list" onclick=modal3()>
+            <div class="list" onclick="modal3('문화클래스')">
               <div class="img"><img src="assets/img/thumb03.png" alt="thumb03" /></div>
             </div>
-            <div class="list" onclick=modal4()>
+            <div class="list" onclick="modal4('성과 공유회')">
               <div class="img"><img src="assets/img/thumb04.png" alt="thumb04" /></div>
             </div>
           </div>
@@ -344,10 +344,26 @@
       </div>
   </main>
   <!-- End #main -->
-  <iframe id="modal1" class="modal-wrap" src="modal/modal1.html"></iframe>
-  <iframe id="modal2" class="modal-wrap" src="modal/modal2.html"></iframe>
-  <iframe id="modal3" class="modal-wrap" src="modal/modal3.html"></iframe>
-  <iframe id="modal4" class="modal-wrap" src="modal/modal4.html"></iframe>
+  <div class="modal modal1">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p id="title" class="tlt">제주문화외교관 오리엔테이션</p>
+        <button type="button" class="close"></button>
+      </div>
+      <!-- End modal-header -->
+      <div class="modal-body">
+        <iframe id="modal1" class="modal-wrap" src="modal/modal1.html"></iframe>
+        <iframe id="modal2" class="modal-wrap" src="modal/modal2.html"></iframe>
+        <iframe id="modal3" class="modal-wrap" src="modal/modal3.html"></iframe>
+        <iframe id="modal4" class="modal-wrap" src="modal/modal4.html"></iframe>
+      </div>
+      <!-- End modal-body -->
+    </div>
+  </div>
+  <!-- End modal -->
+
+
+
 
   <div id="top"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
   <!-- ======= Footer ======= -->
@@ -444,25 +460,33 @@
     });
 
 
-    function modal1() {
+    function modal1(tlt) {
+      document.getElementById('title').innerHTML = tlt;
+      $('.modal').show();
       var iframe1 = document.getElementById('modal1');
       iframe1.style.display = 'block';
     }
-    function modal2() {
+    function modal2(tlt) {
+      document.getElementById('title').innerHTML = tlt;
+      $('.modal').show();
       var iframe2 = document.getElementById('modal2');
       iframe2.style.display = 'block';
     }
-    function modal3() {
+    function modal3(tlt) {
+      document.getElementById('title').innerHTML = tlt;
+      $('.modal').show();
       var iframe1 = document.getElementById('modal3');
       iframe1.style.display = 'block';
     }
-    function modal4() {
+    function modal4(tlt) {
+      document.getElementById('title').innerHTML = tlt;
+      $('.modal').show();
       var iframe1 = document.getElementById('modal4');
       iframe1.style.display = 'block';
     }
 
     $('.modal .close').click(function () {
-      $('.modal-wrap').hide();
+      $('.modal-wrap, .modal').hide();
     })
 
 
