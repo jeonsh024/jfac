@@ -541,6 +541,10 @@
   .section .container .sub-title {
     font-size: 20px;
   }
+  .popup .container {
+    width: 90%;
+    height: 280px;
+  }
   .item-wrap {
     margin-top: 31px;
   }
@@ -577,6 +581,9 @@
     font-size: 16px;
     line-height: 1.5;
   }
+  .item-list .list .title {
+    font-size: 18px;
+  }
   .photo-wrap .slick-prev {
     left: 37%;
   }
@@ -601,11 +608,26 @@
   .item-wrap .item .info {
     width: 47%;
   }
+  .result-wrap .list .img {
+    margin-right: 15px;
+  }
+  .photo-wrap .slick-prev {
+    left: 35%;
+  }
+  .photo-wrap .slick-next {
+    left: 65%;
+  }
+  .modal .modal-content .modal-header .close {
+    right: -30px;
+  }
 }
 
 @media (max-width: 360px) {
   .item-wrap .item .img {
     margin-right: 30px;
+  }
+  .result-wrap .list .list-txt {
+    font-size: 16px;
   }
 }
 
@@ -626,5 +648,22 @@
   }
   .item-wrap .item .info {
     width: 45%;
+  }
+
+  .result-wrap .list .img {
+    margin-right: 6px;
+  }
+  .result-wrap .list .list-txt {
+    font-size: 14px;
+  }
+
+  .modal .modal-content .modal-header .tlt {
+    font-size: 20px;
+  }
+  .photo-wrap .slick-prev {
+    left: 33%;
+  }
+  .photo-wrap .slick-next {
+    left: 67%;
   }
 }

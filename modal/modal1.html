@@ -119,13 +119,6 @@
 
     <script>
 
-        $('.photo-wrap').slick({
-            dots: false,
-            arrows: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-        });
-
         var $status = $('.page-num');
         var $slickElement = $('.photo-wrap');
 
@@ -134,6 +127,16 @@
             var i = (currentSlide ? currentSlide : 0) + 1;
             $status.text(i + ' / ' + slick.slideCount);
         });
+
+        $('.photo-wrap').slick({
+            dots: false,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        });
+
+
+
 
 
 

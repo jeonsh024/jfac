@@ -448,6 +448,10 @@ button:focus {
   #header .container .logo a img {
     width: 100%;
   }
+  .mobile-nav .nav-menu .menu-list {
+    width: 80%;
+    max-width: 250px;
+  }
   .mobile-btns {
     top: 25px;
     right: 15px;
@@ -460,5 +464,26 @@ button:focus {
     font-size: 11px;
     line-height: 18px;
     /* margin-bottom: 16px; */
+  }
+}
+
+@media (max-width: 380px) {
+  .mobile-nav .nav-menu .menu-list {
+    width: 85%;
+  }
+}
+
+@media (max-width: 360px) {
+  .mobile-nav .nav-menu .menu-list {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .mobile-nav .nav-menu .menu-list {
+    padding-bottom: 18px;
+  }
+  .mobile-nav .nav-menu a {
+    font-size: 24px;
   }
 }
